@@ -8,10 +8,14 @@ final int game = 1;
 final int pause = 2;
 final int gameover = 3;
 
+//font---------------------------------------------
+PFont graf;
+
+//color words/////////////////////////////////////////
 int w = int (random(0, 6));
 int c = int (random(0, 6));
 int score;
-
+int fi;
 String[] words;
 color[] colors;
 
@@ -22,11 +26,20 @@ color yellow = #F9D423;
 color purple = #AA00FF;
 color pink = #FF00AA;
 
+
+//color words size//////////////////////////////////
+int cws;
+
+//highscore=============================================
+int highscore;
+
+
 void setup() {
   size(800, 800);
   mode = intro;
   textAlign(CENTER, CENTER);
 
+ 
   words = new String [6];
   colors = new color [6];
 
@@ -42,6 +55,13 @@ void setup() {
   colors [3] = yellow;
   colors [4] = purple;
   colors [5] = pink;
+
+ graf = createFont("Graffiti.ttf",58);
+
+
+
+
+ textFont(graf);
 }
 
 void draw() {
