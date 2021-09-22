@@ -12,7 +12,18 @@ void intro() {
   fill (0);
   textSize(58);
   textFont(graf);
-  text("start", 396, 545);
+  text("START", 396, 545);
+
+//pause------------------------------------------------
+fill(255,0,0);
+textSize(50);
+text("press p to pause in game",400,700);
+
+//gif
+image(gif[f],175,40, 450,450);
+if(frameCount % 5 == 0)f = f + 1;
+
+if (f == n) f = 0;
 }
 
 void introClicks() {

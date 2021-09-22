@@ -25,6 +25,11 @@ void game() {
     mode =gameover;
     highscore = max(highscore, score);
   }
+//pause/////////////////////////////////////////
+ if (pkey==true) {
+    mode = pause;
+ }
+
 }
 void gameClicks() {
 

@@ -8,6 +8,17 @@ final int game = 1;
 final int pause = 2;
 final int gameover = 3;
 
+//giff===============================================
+PImage[] gif;
+int n;
+int f;
+
+
+//pause----------------------------------------------
+boolean pkey;
+boolean ukey;
+
+
 //font---------------------------------------------
 PFont graf;
 
@@ -39,10 +50,9 @@ void setup() {
   mode = intro;
   textAlign(CENTER, CENTER);
 
- 
+  //color word=========================-=================
   words = new String [6];
   colors = new color [6];
-
   words [0] = "red";
   words [1] = "blue";
   words [2] = "green";
@@ -56,12 +66,18 @@ void setup() {
   colors [4] = purple;
   colors [5] = pink;
 
- graf = createFont("Graffiti.ttf",58);
+  //font=================================================
+  graf = createFont("Graffiti.ttf", 58);
+  textFont(graf);
 
-
-
-
- textFont(graf);
+  //gif====================================================
+  n = 19;
+  gif = new PImage [n];
+  int i =0;
+  while (i < n) {
+    gif[i] = loadImage("frame_"+i+"_delay-0.5s.gif");
+    i = i+1;
+  }
 }
 
 void draw() {
